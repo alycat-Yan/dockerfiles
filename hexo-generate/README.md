@@ -9,7 +9,7 @@ version: '3'
 services:
   HexoServer:
     container_name: hexo
-    image: lee170528/hexo-server:1.1
+    image: lee170528/hexo-generate:latest
     restart: always
     volumes:
       - "your/path:/blog/public"
