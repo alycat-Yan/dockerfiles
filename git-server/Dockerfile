@@ -6,5 +6,4 @@ RUN mkdir /var/run/sshd && \
 	echo 'root:admin' | chpasswd && \
 	sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
-#设置自启动命令
 CMD ["/usr/sbin/sshd","-D"]
