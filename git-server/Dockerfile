@@ -7,3 +7,4 @@ RUN mkdir /var/run/sshd && \
 	sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 CMD ["/usr/sbin/sshd","-D"]
+
