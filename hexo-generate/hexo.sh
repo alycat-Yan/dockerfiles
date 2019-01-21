@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ ! -f "/blog/config/config.yml" ];then
+if [[ ! -f "/blog/config/config.yml" ]];then
 	mkdir -p /temp
 	cd /temp
 	hexo init
@@ -8,5 +8,5 @@ if [ ! -f "/blog/config/config.yml" ];then
 	cd /blog
 	rm -rf /temp
 fi
-hexo g -dw --config /blog/config/config.yml
+hexo hook --config /blog/config/config.yml
 
